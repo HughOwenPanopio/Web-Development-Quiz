@@ -1,10 +1,16 @@
 import './App.css'
-import WelcomePage from './components/WelcomePage/index'
+import Header from './components/Header'
+import Main from './components/Main'
+import WelcomePage from './components/WelcomePage'
 
 function App() {
   return (
     <>
-      <WelcomePage />
+      <Header />
+
+      <Main>
+        <WelcomePage />
+      </Main>
     </>
   )
 }
