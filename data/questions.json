@@ -1,0 +1,129 @@
+{
+  "questions": [
+    {
+      "question": "What does HTML stand for?",
+      "options": [
+        "Hyperlinks and Text Markup Language",
+        "Home Tool Markup Language",
+        "Hyper Text Markup Language",
+        "Hyperlinks Text Marking Language"
+      ],
+      "correctAnswer": "Hyper Text Markup Language",
+      "points": 10
+    },
+    {
+      "question": "Which tag is used to create a hyperlink in HTML?",
+      "options": ["<link>", "<a>", "<href>", "<hyperlink>"],
+      "correctAnswer": "<a>",
+      "points": 10
+    },
+    {
+      "question": "What is the correct CSS syntax to change the background color of an element?",
+      "options": [
+        "background-color: red;",
+        "bgcolor: red;",
+        "color-background: red;",
+        "background: red;"
+      ],
+      "correctAnswer": "background-color: red;",
+      "points": 10
+    },
+    {
+      "question": "Which property is used to change the font of an element in CSS?",
+      "options": ["text-family", "font-family", "font-style", "text-style"],
+      "correctAnswer": "font-family",
+      "points": 10
+    },
+    {
+      "question": "How do you include an external CSS file in an HTML document?",
+      "options": [
+        "<stylesheet>style.css</stylesheet>",
+        "<link href=\"style.css\" rel=\"stylesheet\">",
+        "<css src=\"style.css\">",
+        "<style src=\"style.css\">"
+      ],
+      "correctAnswer": "<link href=\"style.css\" rel=\"stylesheet\">",
+      "points": 10
+    },
+    {
+      "question": "What does the 'C' in CSS stand for?",
+      "options": ["Colorful", "Creative", "Cascading", "Computer"],
+      "correctAnswer": "Cascading",
+      "points": 10
+    },
+    {
+      "question": "Which HTML attribute is used to define inline styles?",
+      "options": ["styles", "style", "class", "font"],
+      "correctAnswer": "style",
+      "points": 10
+    },
+    {
+      "question": "What is the correct way to reference a JavaScript file in HTML?",
+      "options": [
+        "<script src=\"script.js\"></script>",
+        "<javascript src=\"script.js\"></javascript>",
+        "<js src=\"script.js\"></js>",
+        "<script href=\"script.js\"></script>"
+      ],
+      "correctAnswer": "<script src=\"script.js\"></script>",
+      "points": 10
+    },
+    {
+      "question": "Which event occurs when the user clicks on an HTML element?",
+      "options": ["onmouseover", "onchange", "onclick", "onmouseclick"],
+      "correctAnswer": "onclick",
+      "points": 10
+    },
+    {
+      "question": "Which method can be used to find an HTML element by its ID in JavaScript?",
+      "options": [
+        "getElementById()",
+        "getElement()",
+        "findElementById()",
+        "querySelector()"
+      ],
+      "correctAnswer": "getElementById()",
+      "points": 10
+    },
+    {
+      "question": "In CSS, what is the purpose of the z-index property?",
+      "options": [
+        "To change the color of an element",
+        "To control the stacking order of elements",
+        "To change the font size of an element",
+        "To control the opacity of an element"
+      ],
+      "correctAnswer": "To control the stacking order of elements",
+      "points": 10
+    },
+    {
+      "question": "What does the 'async' attribute do in a script tag in HTML?",
+      "options": [
+        "It defers the loading of the script until the rest of the page has loaded",
+        "It loads the script synchronously",
+        "It loads the script asynchronously without blocking the page",
+        "It prevents the script from being executed"
+      ],
+      "correctAnswer": "It loads the script asynchronously without blocking the page",
+      "points": 10
+    },
+    {
+      "question": "Which of the following is not a semantic HTML element?",
+      "options": ["<article>", "<section>", "<div>", "<header>"],
+      "correctAnswer": "<div>",
+      "points": 10
+    },
+    {
+      "question": "Which HTTP method is used to submit data to be processed to a specified resource?",
+      "options": ["GET", "POST", "PUT", "DELETE"],
+      "correctAnswer": "POST",
+      "points": 10
+    },
+    {
+      "question": "In which year was the first version of HTML released?",
+      "options": ["1991", "1993", "1995", "1997"],
+      "correctAnswer": "POST",
+      "points": 10
+    }
+  ]
+}
