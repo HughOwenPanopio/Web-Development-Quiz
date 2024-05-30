@@ -5,25 +5,35 @@ import Main from './components/Main'
 import WelcomePage from './components/WelcomePage'
 import LoadingPage from './components/LoadingPage'
 import ErrorPage from './components/ErrorPage'
+import QuestionsPage from './components/QuestionsPage'
 
 const initialState = {
   questions: [],
+  // loading, ready, error, active, finish
   status: 'loading',
+  index: 0,
 }
 
 function reducer(state, action) {
   switch (action.type) {
     case 'questionReceived':
-      return { ...state, question: action.payload, status: 'ready' }
+      return { ...state, questions: action.payload, status: 'ready' }
     case 'dataError':
       return { ...state, status: 'error' }
+    case 'startQuiz':
+      return { ...state, status: 'active' }
     default:
       throw new Error('Unknown')
   }
 }
 
 function App() {
-  const [{ question, status }, dispatch] = useReducer(reducer, initialState)
+  const [{ questions, status, index }, dispatch] = useReducer(
+    reducer,
+    initialState
+  )
+
+  const numQuestions = questions.length
 
   useEffect(function () {
     fetch('http://localhost:9000/questions')
@@ -39,7 +49,10 @@ function App() {
       <Main>
         {status === 'loading' && <LoadingPage />}
         {status === 'error' && <ErrorPage />}
-        {status === 'ready' && <WelcomePage />}
+        {status === 'ready' && (
+          <WelcomePage dispatch={dispatch} numQuestions={numQuestions} />
+        )}
+        {status === 'active' && <QuestionsPage questions={questions[index]} />}
       </Main>
     </>
   )

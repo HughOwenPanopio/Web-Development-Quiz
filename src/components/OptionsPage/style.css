@@ -1,0 +1,26 @@
+.option-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.btn-option {
+  border-radius: 50px;
+  padding: 1.2rem;
+  font-size: 18px;
+  width: 50%;
+}
+
+.btn-option:hover {
+  transform: translateX(1.5rem);
+  background-color: #09ae2c;
+}
+
+.btn-option.correct {
+  background-color: #eadb4c;
+}
+
+.btn-option.wrong {
+  background-color: #ea5f4c;
+}

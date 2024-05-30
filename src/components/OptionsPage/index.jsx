@@ -1,5 +1,20 @@
-function OptionPage() {
-  return <div></div>
+import PropTypes from 'prop-types'
+import './style.css'
+
+function OptionsPage({ questions }) {
+  return (
+    <div className="option-container">
+      {questions.options.map((option) => (
+        <button className="btn-option" key={option}>
+          {option}
+        </button>
+      ))}
+    </div>
+  )
 }
 
-export default OptionPage
+OptionsPage.propTypes = {
+  questions: PropTypes.object,
+}
+
+export default OptionsPage
