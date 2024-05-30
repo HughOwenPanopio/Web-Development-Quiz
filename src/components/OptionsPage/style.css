@@ -12,9 +12,13 @@
   width: 50%;
 }
 
-.btn-option:hover {
+.btn-option:not([disabled]):hover {
   transform: translateX(1.5rem);
   background-color: #09ae2c;
+}
+
+.btn-option[disabled]:hover {
+  cursor: not-allowed;
 }
 
 .btn-option.correct {
@@ -23,4 +27,9 @@
 
 .btn-option.wrong {
   background-color: #ea5f4c;
+}
+
+.answer {
+  transform: translateX(1.5rem);
+  background-color: brown;
 }

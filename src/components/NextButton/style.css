@@ -1,0 +1,9 @@
+.btn-next {
+  width: 8%;
+  border-radius: 50px;
+  padding: 1rem;
+  background-color: #f0a556;
+  font-size: 20px;
+  font-weight: 700;
+  float: right;
+}

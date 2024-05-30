@@ -6,15 +6,21 @@ import WelcomePage from './components/WelcomePage'
 import LoadingPage from './components/LoadingPage'
 import ErrorPage from './components/ErrorPage'
 import QuestionsPage from './components/QuestionsPage'
+import Footer from './components/Footer'
+import NextButton from './components/NextButton'
 
 const initialState = {
   questions: [],
   // loading, ready, error, active, finish
   status: 'loading',
   index: 0,
+  answer: null,
+  points: 0,
 }
 
 function reducer(state, action) {
+  const question = state.questions.at(state.index)
+
   switch (action.type) {
     case 'questionReceived':
       return { ...state, questions: action.payload, status: 'ready' }
@@ -22,13 +28,24 @@ function reducer(state, action) {
       return { ...state, status: 'error' }
     case 'startQuiz':
       return { ...state, status: 'active' }
+    case 'newAnswer':
+      return {
+        ...state,
+        answer: action.payload,
+        points:
+          action.payload === question.correctAnswer
+            ? state.points + question.points
+            : state.points,
+      }
+    case 'nextQuestions':
+      return { ...state, index: state.index + action.payload }
     default:
       throw new Error('Unknown')
   }
 }
 
 function App() {
-  const [{ questions, status, index }, dispatch] = useReducer(
+  const [{ questions, status, index, answer, points }, dispatch] = useReducer(
     reducer,
     initialState
   )
@@ -52,8 +69,18 @@ function App() {
         {status === 'ready' && (
           <WelcomePage dispatch={dispatch} numQuestions={numQuestions} />
         )}
-        {status === 'active' && <QuestionsPage questions={questions[index]} />}
+        {status === 'active' && (
+          <QuestionsPage
+            question={questions[index]}
+            dispatch={dispatch}
+            answer={answer}
+          />
+        )}
       </Main>
+
+      <Footer>
+        <NextButton dispatch={dispatch} />
+      </Footer>
     </>
   )
 }

@@ -1,11 +1,24 @@
 import PropTypes from 'prop-types'
 import './style.css'
 
-function OptionsPage({ questions }) {
+function OptionsPage({ question, dispatch, answer }) {
+  const hasAnswer = answer !== null
+
   return (
     <div className="option-container">
-      {questions.options.map((option) => (
-        <button className="btn-option" key={option}>
+      {question.options.map((option, index) => (
+        <button
+          className={`btn-option ${index === answer ? 'answer' : ''} ${
+            hasAnswer
+              ? index === question.correctAnswer
+                ? 'correct'
+                : 'wrong'
+              : ''
+          }`}
+          disabled={hasAnswer}
+          key={option}
+          onClick={() => dispatch({ type: 'newAnswer', payload: index })}
+        >
           {option}
         </button>
       ))}
@@ -14,7 +27,9 @@ function OptionsPage({ questions }) {
 }
 
 OptionsPage.propTypes = {
-  questions: PropTypes.object,
+  question: PropTypes.object,
+  dispatch: PropTypes.func,
+  answer: PropTypes.number,
 }
 
 export default OptionsPage

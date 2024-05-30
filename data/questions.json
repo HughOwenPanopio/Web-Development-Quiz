@@ -8,13 +8,13 @@
         "Hyper Text Markup Language",
         "Hyperlinks Text Marking Language"
       ],
-      "correctAnswer": "Hyper Text Markup Language",
+      "correctAnswer": 2,
       "points": 10
     },
     {
       "question": "Which tag is used to create a hyperlink in HTML?",
       "options": ["<link>", "<a>", "<href>", "<hyperlink>"],
-      "correctAnswer": "<a>",
+      "correctAnswer": 1,
       "points": 10
     },
     {
@@ -25,13 +25,13 @@
         "color-background: red;",
         "background: red;"
       ],
-      "correctAnswer": "background-color: red;",
+      "correctAnswer": 0,
       "points": 10
     },
     {
       "question": "Which property is used to change the font of an element in CSS?",
       "options": ["text-family", "font-family", "font-style", "text-style"],
-      "correctAnswer": "font-family",
+      "correctAnswer": 1,
       "points": 10
     },
     {
@@ -42,19 +42,19 @@
         "<css src=\"style.css\">",
         "<style src=\"style.css\">"
       ],
-      "correctAnswer": "<link href=\"style.css\" rel=\"stylesheet\">",
+      "correctAnswer": 1,
       "points": 10
     },
     {
       "question": "What does the 'C' in CSS stand for?",
       "options": ["Colorful", "Creative", "Cascading", "Computer"],
-      "correctAnswer": "Cascading",
+      "correctAnswer": 2,
       "points": 10
     },
     {
       "question": "Which HTML attribute is used to define inline styles?",
       "options": ["styles", "style", "class", "font"],
-      "correctAnswer": "style",
+      "correctAnswer": 1,
       "points": 10
     },
     {
@@ -65,13 +65,13 @@
         "<js src=\"script.js\"></js>",
         "<script href=\"script.js\"></script>"
       ],
-      "correctAnswer": "<script src=\"script.js\"></script>",
+      "correctAnswer": 0,
       "points": 10
     },
     {
       "question": "Which event occurs when the user clicks on an HTML element?",
       "options": ["onmouseover", "onchange", "onclick", "onmouseclick"],
-      "correctAnswer": "onclick",
+      "correctAnswer": 2,
       "points": 10
     },
     {
@@ -82,7 +82,7 @@
         "findElementById()",
         "querySelector()"
       ],
-      "correctAnswer": "getElementById()",
+      "correctAnswer": 0,
       "points": 10
     },
     {
@@ -93,7 +93,7 @@
         "To change the font size of an element",
         "To control the opacity of an element"
       ],
-      "correctAnswer": "To control the stacking order of elements",
+      "correctAnswer": 1,
       "points": 10
     },
     {
@@ -104,25 +104,25 @@
         "It loads the script asynchronously without blocking the page",
         "It prevents the script from being executed"
       ],
-      "correctAnswer": "It loads the script asynchronously without blocking the page",
+      "correctAnswer": 2,
       "points": 10
     },
     {
       "question": "Which of the following is not a semantic HTML element?",
       "options": ["<article>", "<section>", "<div>", "<header>"],
-      "correctAnswer": "<div>",
+      "correctAnswer": 2,
       "points": 10
     },
     {
       "question": "Which HTTP method is used to submit data to be processed to a specified resource?",
       "options": ["GET", "POST", "PUT", "DELETE"],
-      "correctAnswer": "POST",
+      "correctAnswer": 1,
       "points": 10
     },
     {
       "question": "In which year was the first version of HTML released?",
       "options": ["1991", "1993", "1995", "1997"],
-      "correctAnswer": "POST",
+      "correctAnswer": 0,
       "points": 10
     }
   ]
