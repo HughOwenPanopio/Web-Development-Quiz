@@ -1,0 +1,17 @@
+.error {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.error img {
+  width: 15%;
+}
+
+@media screen and (max-width: 550px) {
+  .error {
+    font-size: 0.5rem;
+  }
+}
