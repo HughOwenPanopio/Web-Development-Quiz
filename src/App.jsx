@@ -38,7 +38,7 @@ function reducer(state, action) {
             : state.points,
       }
     case 'nextQuestions':
-      return { ...state, index: state.index + action.payload }
+      return { ...state, index: state.index + action.payload, answer: null }
     default:
       throw new Error('Unknown')
   }

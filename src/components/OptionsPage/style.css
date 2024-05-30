@@ -33,3 +33,11 @@
   transform: translateX(1.5rem);
   background-color: brown;
 }
+
+@media screen and (max-width: 767px) {
+  .btn-option {
+    width: 100%;
+    font-size: 15px;
+    padding: 0.8rem;
+  }
+}
