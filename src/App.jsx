@@ -79,7 +79,7 @@ function App() {
       </Main>
 
       <Footer>
-        <NextButton dispatch={dispatch} />
+        <NextButton dispatch={dispatch} answer={answer} />
       </Footer>
     </>
   )
