@@ -94,7 +94,7 @@
         "To control the opacity of an element"
       ],
       "correctAnswer": 1,
-      "points": 10
+      "points": 20
     },
     {
       "question": "What does the 'async' attribute do in a script tag in HTML?",
@@ -105,7 +105,7 @@
         "It prevents the script from being executed"
       ],
       "correctAnswer": 2,
-      "points": 10
+      "points": 30
     },
     {
       "question": "Which of the following is not a semantic HTML element?",
@@ -117,7 +117,7 @@
       "question": "Which HTTP method is used to submit data to be processed to a specified resource?",
       "options": ["GET", "POST", "PUT", "DELETE"],
       "correctAnswer": 1,
-      "points": 10
+      "points": 30
     },
     {
       "question": "In which year was the first version of HTML released?",

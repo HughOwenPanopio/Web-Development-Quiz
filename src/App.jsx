@@ -8,6 +8,7 @@ import ErrorPage from './components/ErrorPage'
 import QuestionsPage from './components/QuestionsPage'
 import Footer from './components/Footer'
 import NextButton from './components/NextButton'
+import Progress from './components/Progress'
 
 const initialState = {
   questions: [],
@@ -51,6 +52,7 @@ function App() {
   )
 
   const numQuestions = questions.length
+  const totalPoints = questions.reduce((prev, cur) => prev + cur.points, 0)
 
   useEffect(function () {
     fetch('http://localhost:9000/questions')
@@ -70,11 +72,20 @@ function App() {
           <WelcomePage dispatch={dispatch} numQuestions={numQuestions} />
         )}
         {status === 'active' && (
-          <QuestionsPage
-            question={questions[index]}
-            dispatch={dispatch}
-            answer={answer}
-          />
+          <>
+            <Progress
+              numQuestions={numQuestions}
+              points={points}
+              answer={answer}
+              index={index}
+              totalPoints={totalPoints}
+            />
+            <QuestionsPage
+              question={questions[index]}
+              dispatch={dispatch}
+              answer={answer}
+            />
+          </>
         )}
       </Main>
 

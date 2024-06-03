@@ -1,0 +1,43 @@
+progress {
+  width: 50%;
+  margin: auto;
+}
+
+.questions-points {
+  display: flex;
+  flex-direction: row;
+  gap: 27rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  progress {
+    width: 50%;
+  }
+  .questions-points {
+    display: flex;
+    flex-direction: row;
+    gap: 17rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .questions-points {
+    display: flex;
+    flex-direction: row;
+    gap: 9rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  progress {
+    width: 100%;
+  }
+  .questions-points {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    font-size: 15px;
+  }
+}
