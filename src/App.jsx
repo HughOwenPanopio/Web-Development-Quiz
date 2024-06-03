@@ -9,6 +9,7 @@ import QuestionsPage from './components/QuestionsPage'
 import Footer from './components/Footer'
 import NextButton from './components/NextButton'
 import Progress from './components/Progress'
+import FinishedPage from './components/FinishedPage'
 
 const initialState = {
   questions: [],
@@ -40,6 +41,10 @@ function reducer(state, action) {
       }
     case 'nextQuestions':
       return { ...state, index: state.index + action.payload, answer: null }
+    case 'finishedQuiz':
+      return { ...state, status: 'complete' }
+    case 'restartQuiz':
+      return { initialState, questions: state.questions, status: 'ready' }
     default:
       throw new Error('Unknown')
   }
@@ -89,9 +94,24 @@ function App() {
         )}
       </Main>
 
-      <Footer>
-        <NextButton dispatch={dispatch} answer={answer} />
-      </Footer>
+      {status === 'complete' || (
+        <Footer>
+          <NextButton
+            dispatch={dispatch}
+            answer={answer}
+            index={index}
+            numQuestions={numQuestions}
+          />
+        </Footer>
+      )}
+
+      {status === 'complete' && (
+        <FinishedPage
+          points={points}
+          totalPoints={totalPoints}
+          dispatch={dispatch}
+        />
+      )}
     </>
   )
 }
